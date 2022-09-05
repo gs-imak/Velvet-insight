@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Velvet Insight</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <!-- Navigation bar -->
+        <header class="p-3 mb-3">
+          <div class="p-3 container bg-1">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+              <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                <img class="logo-insight" src="./img/logo-insight@2x.png" alt="">
+              </a>
+              <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              </ul>
+              <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                  <button class="btn btn-bd-special-1 me-2" type="button">Accueil</button>
+                  <button class="btn btn-bd-special-2 me-2" type="button">Mes publications</button>
+                  <button class="btn btn-bd-special-3 me-2" type="button"><img class="ico-heart" src="./img/ico-coeur@2x.png" alt="heart shape"></button>
+              </form>
+              <div class="dropdown text-end">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="https://github.com/mdo.png" alt="mdo" width="40" height="40" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                  <li><a class="dropdown-item" href="#">New publication</a></li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+              </div>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end mx-2">
+                  <button class="btn btn-bd-special-red" type="button"><img class="ico-plus" src="./img/ico-plus@2x.png" alt="add sign"></button>
+                </div>
+            </div>
+          </div>
+        </header>
+        <!-- Filter button + mode affichage -->
+        <div class="d-flex bd-highlight mx-5 mb-3 align-items-center mb-5">
+          <div class="bd-highlight header-text fs-4"><span class="header-num">450</span> contenus disponibles</div>
+          <div class="bd-highlight"><button type="button" class="button-filter btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Filtrer</button></div>
+          <div class="ms-auto p-2 bd-highlight fs-5 header-text">Affichage</div>
+          <div class="p-2 bd-highlight"><img class="img-grid" src="./img/grid-two-up.png" alt=""></div>
+          <div class="p-2 bd-highlight"><img class="img-list" src="./img/list.png" alt=""></div>
+        </div>
+        
+        <div class="container">
+          
+          <div class="d-flex justify-content-around" style="border-bottom: 2px solid white; margin: 0px 0px 30px 0px ;">
+            <div>
+            <button class="btn-bd-special-4 me-3 mt-2" type="button"><img class="ico-heart" src="./img/ico-coeur@2x.png" alt="fav icon"></button>
+            <span class="badge special-pill-list">Primary</span>
+            <span class="badge special-pill-list">Primary</span>
+            </div>
+            <span class="titre-list">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum, <br> mauris ac interdum placerat, nisl nunc venenatis quam</span>
+            <div class="d-flex align-items-start flex-column">
+            <p class="source-text"><img class="card-icon" src="./img/behance.png" alt="icon">Medium</p>
+            <p class="post-date-name">23/10/2021 · Mélanie R.</p>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-around" style="border-bottom: 2px solid white; margin: 0px 0px 30px 0px ;">
+            <div>
+            <button class="btn-bd-special-4 me-3 mt-2" type="button"><img class="ico-heart" src="./img/ico-coeur@2x.png" alt="fav icon"></button>
+            <span class="badge special-pill-list">Primary</span>
+            <span class="badge special-pill-list">Primary</span>
+            </div>
+            <span class="titre-list">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum, <br> mauris ac interdum placerat, nisl nunc venenatis quam</span>
+            <div class="d-flex align-items-start flex-column">
+            <p class="source-text"><img class="card-icon" src="./img/behance.png" alt="icon">Medium</p>
+            <p class="post-date-name">23/10/2021 · Mélanie R.</p>
+            </div>
+          </div>
+          <div class="d-flex justify-content-around" style="border-bottom: 2px solid white; margin: 0px 0px 30px 0px ;">
+            <div>
+            <button class="btn-bd-special-4 me-3 mt-2" type="button"><img class="ico-heart" src="./img/ico-coeur@2x.png" alt="fav icon"></button>
+            <span class="badge special-pill-list">Primary</span>
+            <span class="badge special-pill-list">Primary</span>
+            </div>
+            <span class="titre-list">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum, <br> mauris ac interdum placerat, nisl nunc venenatis quam</span>
+            <div class="d-flex align-items-start flex-column">
+            <p class="source-text"><img class="card-icon" src="./img/behance.png" alt="icon">Medium</p>
+            <p class="post-date-name">23/10/2021 · Mélanie R.</p>
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
