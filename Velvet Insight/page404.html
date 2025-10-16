@@ -24,29 +24,29 @@
           class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
         >
           <a
-            href="/"
+            href="index.html"
             class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none"
           >
-            <img class="logo-insight" src="./img/logo-insight@2x.png" alt="" />
+            <img class="logo-insight" src="./img/logo-insight@2x.png" alt="Velvet Insight Logo" />
           </a>
           <ul
             class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
           ></ul>
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-            <button class="btn btn-bd-special-1 me-2" type="button">
+          <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <a href="index.html"><button class="btn btn-bd-special-1 me-2" type="button">
               Accueil
-            </button>
-            <button class="btn btn-bd-special-2 me-2" type="button">
+            </button></a>
+            <a href="mes-pub.html"><button class="btn btn-bd-special-2 me-2" type="button">
               Mes publications
-            </button>
-            <button class="btn btn-bd-special-3 me-2" type="button">
+            </button></a>
+            <a href="index-list.html"><button class="btn btn-bd-special-3 me-2" type="button">
               <img
                 class="ico-heart"
                 src="./img/ico-coeur@2x.png"
-                alt="heart shape"
+                alt="Favoris"
               />
-            </button>
-          </form>
+            </button></a>
+          </div>
           <div class="dropdown text-end">
             <a
               href="#"
@@ -75,11 +75,11 @@
             </ul>
           </div>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end mx-2">
-            <button class="btn btn-bd-special-red" type="button">
+            <button class="btn btn-bd-special-red" type="button" data-bs-toggle="modal" data-bs-target="#createModal">
               <img
                 class="ico-plus"
                 src="./img/ico-plus@2x.png"
-                alt="add sign"
+                alt="Ajouter une publication"
               />
             </button>
           </div>
@@ -98,7 +98,7 @@
       </div>
     </div>
     <div class="container d-flex justify-content-center">
-      <a href="/Velvet Insight/index.html"><button type="button" class="button-1 btn btn-secondary btn-lg m-1">
+      <a href="index.html"><button type="button" class="button-1 btn btn-secondary btn-lg m-1">
         Retour à l'accueil
       </button></a>
     </div>
@@ -106,11 +106,56 @@
       class="container d-flex flex-column justify-content-center align-items-center float-text"
     >
       <p class="fw-bold fs-5 m-1">
-        Il n’existe pas encore de contenu sur le sujet que tu recherches…
+        Il n'existe pas encore de contenu sur le sujet que tu recherches…
       </p>
       <p class="d-block fs-6">
-        Et si tu devenais la première personne à patager du contenu ?
+        Et si tu devenais la première personne à partager du contenu ?
       </p>
+    </div>
+
+    <!-- Create Modal -->
+    <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="d-flex justify-content-end mx-4 mt-3">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-header justify-content-center">
+            <h5 class="modal-title" id="createModalLabel">Hey! Tu as déniché une nouvelle inspiration ? Partage-la à tes collaborateurs</h5>
+          </div>
+          <div class="modal-body px-5">
+            <div class="mb-4">
+              <div class="d-flex align-items-center mb-3">
+                <img class="number-1 me-2" src="img/number-1.png" alt="Step 1">
+                <span class="fw-bold">Colle l'URL dans le champ ci-dessous</span>
+              </div>
+              <form>
+                <div class="form-group">
+                  <input type="url" class="form-control" id="urlInput" placeholder="www.lurldusiteextralongue.com">
+                </div>
+              </form>
+            </div>
+            <div>
+              <div class="d-flex align-items-center mb-3">
+                <img class="number-2 me-2" src="img/number-2.png" alt="Step 2">
+                <span class="fw-bold">Choisis une à deux catégorie(s) pour que tes collaborateurs la retrouvent facilement</span>
+              </div>
+              <div class="text-center">
+                <span class="badge rounded-pill special-pill">Stratégie de marque & CX</span>
+                <span class="badge rounded-pill special-pill">UX DESIGN</span>
+                <span class="badge rounded-pill special-pill">UI design</span>
+                <span class="badge rounded-pill special-pill">Transformation</span>
+                <span class="badge rounded-pill special-pill">Innovation</span>
+                <span class="badge rounded-pill special-pill">Design thinking</span>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="button-mod-1 btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+            <button type="button" class="button-mod-2 btn btn-primary">Confirmer</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script
@@ -118,5 +163,6 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>

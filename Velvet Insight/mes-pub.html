@@ -13,16 +13,16 @@
     <header class="p-3 mb-3">
       <div class="container p-3 bg-1">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/Velvet Insight/index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-            <img class="logo-insight" src="./img/logo-insight@2x.png" alt="">
+          <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+            <img class="logo-insight" src="./img/logo-insight@2x.png" alt="Velvet Insight Logo">
           </a>
           <ul class="nav col-12 col-lg me-lg-auto mb-2 justify-content-center mb-md-0">
           </ul>
-          <form class="col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-              <a href="/Velvet Insight/index.html"><button class="btn btn-bd-special-1 me-2" type="button">Accueil</button></a>
-              <a href="/Velvet Insight/mes-pub.html"><button class="btn btn-bd-special-2 me-2" type="button">Mes publications</button></a>
-              <button class="btn btn-bd-special-3 me-2" type="button"><img class="ico-heart" src="./img/ico-coeur@2x.png" alt="heart shape"></button>
-          </form>
+          <div class="col-lg-auto mb-3 mb-lg-0 me-lg-3">
+              <a href="index.html"><button class="btn btn-bd-special-1 me-2" type="button">Accueil</button></a>
+              <a href="mes-pub.html"><button class="btn btn-bd-special-2 me-2" type="button">Mes publications</button></a>
+              <a href="index-list.html"><button class="btn btn-bd-special-3 me-2" type="button"><img class="ico-heart" src="./img/ico-coeur@2x.png" alt="Favoris"></button></a>
+          </div>
           <div class="dropdown text-end align-items-start">
             <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
               <img src="https://github.com/mdo.png" alt="mdo" width="40" height="40" class="rounded-circle">
@@ -36,47 +36,107 @@
             </ul>
           </div>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end align-items-start mx-2">
-              <button class="btn btn-bd-special-red" type="button"><img class="ico-plus" src="./img/ico-plus@2x.png" alt="add sign"></button>
+              <button class="btn btn-bd-special-red" type="button" data-bs-toggle="modal" data-bs-target="#createModal"><img class="ico-plus" src="./img/ico-plus@2x.png" alt="Ajouter une publication"></button>
             </div>
         </div>
       </div>
     </header>
           <!-- Filter button + mode affichage -->
           <div class="d-flex bd-highlight mx-5 mb-3 align-items-center mb-5">
-            <div class="bd-highlight header-text fs-4"><span class="header-num">450</span> contenus disponibles</div>
-            <div class="bd-highlight"><button type="button" class="button-filter btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Filtrer</button></div>
+            <div class="bd-highlight header-text fs-4"><span class="header-num">8</span> publications disponibles</div>
+            <div class="bd-highlight"><button type="button" class="button-filter btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#filterModal">Filtrer</button></div>
             <div class="ms-auto p-2 bd-highlight fs-5 header-text">Affichage</div>
-            <div class="p-2 bd-highlight"><img class="img-grid" src="./img/grid-two-up.png"></div>
-            <div class="p-2 bd-highlight"><img class="img-list" src="./img/list.png"></div>
+            <div class="p-2 bd-highlight"><img class="img-grid" src="./img/grid-two-up.png" alt="Grid view" style="cursor: pointer; opacity: 0.5;"></div>
+            <div class="p-2 bd-highlight"><a href="mes-pub.html"><img class="img-list" src="./img/list.png" alt="List view" style="cursor: pointer;"></a></div>
           </div>
-<!-- Modal with filter -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Filter Modal -->
+<div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="d-flex justify-content-end mx-4 mt-3">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-        </button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-header justify-content-center pt-0 pb-5">
+        <h5 class="modal-title" id="filterModalLabel">Filtrer par catégories</h5>
+      </div>
+      <div class="d-flex justify-content-end align-items-center pb-4 px-5">
+        <img class="ico-arrow" src="./img/path@2x.png" alt="Reset">
+        <span class="align-items-stretch filter-reset" style="margin: 0px 80px 0px 10px; padding: 4px; color: black; font-weight: 600; font-size: 14px; cursor: pointer;">RÉINITIALISER</span>
+      </div>
+      <div class="modal-body text-center px-5 pb-5">
+        <span class="badge rounded-pill special-pill">Stratégie de marque & CX</span>
+        <span class="badge rounded-pill special-pill">UX DESIGN</span>
+        <span class="badge rounded-pill special-pill">UI design</span>
+        <span class="badge rounded-pill special-pill">Transformation</span>
+        <span class="badge rounded-pill special-pill">Innovation</span>
+        <span class="badge rounded-pill special-pill">Design thinking</span>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="button-mod-1 btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        <button type="button" class="button-mod-2 btn btn-primary" data-bs-dismiss="modal">Confirmer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Create Modal -->
+<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="d-flex justify-content-end mx-4 mt-3">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-header justify-content-center">
-        <h5 class="modal-title" id="exampleModalLabel">Filtrer par catégories</h5>
+        <h5 class="modal-title" id="createModalLabel">Hey! Tu as déniché une nouvelle inspiration ? Partage-la à tes collaborateurs</h5>
       </div>
-      <div class="d-flex justify-content-end align-items-center pb-4">
-      <img class="ico-arrow" src="./img/path@2x.png" alt="">
-      <span class="align-items-stretch" style="margin: 0px 80px 0px 0px;padding: 4px; color: black;font-weight: 600;font-size: 14px;">RÉINITIALISER</span>
-      </div>
-      <div class="modal-body text-center px-5">
-        <span class="badge rounded-pill special-pill">STratégie de marque & CX</span>
-        <span class="badge rounded-pill special-pill">UX DESIGN</span>
-        <span class="badge rounded-pill special-pill">Categorie XXX</span>
-        <span class="badge rounded-pill special-pill">UI design</span>
-        <span class="badge rounded-pill special-pill">Categorie XXX</span>
-        <span class="badge rounded-pill special-pill">Transformation</span>
-        <span class="badge rounded-pill special-pill">Categorie XXX</span>
-        <span class="badge rounded-pill special-pill">STratégie de marque & CX</span>
+      <div class="modal-body px-5">
+        <div class="mb-4">
+          <div class="d-flex align-items-center mb-3">
+            <img class="number-1 me-2" src="img/number-1.png" alt="Step 1">
+            <span class="fw-bold">Colle l'URL dans le champ ci-dessous</span>
+          </div>
+          <form>
+            <div class="form-group">
+              <input type="url" class="form-control" id="urlInput" placeholder="www.lurldusiteextralongue.com">
+            </div>
+          </form>
+        </div>
+        <div>
+          <div class="d-flex align-items-center mb-3">
+            <img class="number-2 me-2" src="img/number-2.png" alt="Step 2">
+            <span class="fw-bold">Choisis une à deux catégorie(s) pour que tes collaborateurs la retrouvent facilement</span>
+          </div>
+          <div class="text-center">
+            <span class="badge rounded-pill special-pill">Stratégie de marque & CX</span>
+            <span class="badge rounded-pill special-pill">UX DESIGN</span>
+            <span class="badge rounded-pill special-pill">UI design</span>
+            <span class="badge rounded-pill special-pill">Transformation</span>
+            <span class="badge rounded-pill special-pill">Innovation</span>
+            <span class="badge rounded-pill special-pill">Design thinking</span>
+          </div>
+        </div>
       </div>
       <div class="modal-footer justify-content-center">
         <button type="button" class="button-mod-1 btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
         <button type="button" class="button-mod-2 btn btn-primary">Confirmer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header justify-content-center">
+        <h5 class="modal-title" id="deleteModalLabel">Confirmation de suppression</h5>
+      </div>
+      <div class="modal-body text-center px-5">
+        Tu es sur le point de supprimer définitivement ta publication. Pas de regrets ?
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="button-mod-1 btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        <button type="button" class="button-mod-2 btn btn-primary" data-bs-dismiss="modal">Confirmer</button>
       </div>
     </div>
   </div>
@@ -88,8 +148,8 @@
   <div class="col">
       <div class="card" style="width: 18rem;">
         <div class="">
-          <button class="btn btn-fav me-3 mt-2" type="button"><img class="ico-fav" src="./img/ico-coeur-white.png" alt="fav icon"></button>
-          <button class="btn btn-delete me-3 mt-5" type="button"><img class="ico-trash" src="./img/bin-white.png" alt="trash icon"></button>
+          <button class="btn btn-fav me-3 mt-2" type="button" title="Ajouter aux favoris"><img class="ico-fav" src="./img/ico-coeur-white.png" alt="fav icon"></button>
+          <button class="btn btn-delete me-3 mt-5" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal" title="Supprimer"><img class="ico-trash" src="./img/bin-white.png" alt="trash icon"></button>
           <img src="./img/card-img.jpg" class="card-img" alt="...">
         </div>
       <div class="card-body">
@@ -233,5 +293,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </body>
 </html>

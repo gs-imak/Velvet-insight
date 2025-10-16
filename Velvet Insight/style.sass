@@ -457,6 +457,107 @@ input::placeholder {
   font-size: 0.8rem;
 }
 
+.form-control {
+  border-radius: 10px;
+  border: 2px solid #e0e0e0;
+  padding: 12px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    border-color: #4b88ff;
+    box-shadow: 0 0 0 0.2rem rgba(75, 136, 255, 0.25);
+  }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .container {
+    --bs-gutter-x: 2rem;
+  }
+  
+  .header-text {
+    padding: 0px 10px;
+    font-size: 14px !important;
+  }
+  
+  .header-num {
+    font-size: 24px;
+  }
+  
+  .btn-bd-special-1,
+  .btn-bd-special-2,
+  .btn-bd-special-3 {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  
+  .logo-insight {
+    width: 140px;
+    height: 36px;
+  }
+  
+  .card {
+    width: 100% !important;
+    margin: 10px auto;
+  }
+  
+  .modal-dialog {
+    margin: 10px;
+  }
+  
+  .modal-title {
+    font-size: 16px;
+  }
+}
+
+/* Card hover effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Button focus states for accessibility */
+.btn:focus,
+.btn-bd-special-1:focus,
+.btn-bd-special-2:focus,
+.btn-bd-special-3:focus {
+  outline: 2px solid #4b88ff;
+  outline-offset: 2px;
+}
+
+.btn-close:focus {
+  outline: 2px solid #4b88ff;
+  outline-offset: 2px;
+}
+
+.ico-trash {
+  width: 15px;
+  height: 17px;
+}
+
+.img-grid,
+.img-list {
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.filter-reset {
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #4b88ff !important;
+  }
+}
+
 /* montserrat-regular - latin */
 @font-face {
   font-family: 'Montserrat';

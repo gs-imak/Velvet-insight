@@ -257,13 +257,22 @@ body {
 	color: #4b88ff;
 	background-color: #fff;
 	border: solid 1px #4b88ff;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	margin: 3px;
 }
-.special-pill:active {
+.special-pill:hover {
+	color: #000;
+	background-color: #d4e3ff;
+	border-color: #4b88ff;
+}
+.special-pill:active,
+.special-pill.active {
 	padding: 5px 12px;
 	font-size: 11px;
 	color: #000;
 	background-color: #578AF0;
-	border-color: #578AF0
+	border-color: #578AF0;
 }
 .special-pill-list {
 	border-radius: 32px;
@@ -311,15 +320,30 @@ body {
 .img-grid {
 	height: 24px;
 	width: 25px;
+	transition: opacity 0.3s ease;
+}
+.img-grid:hover {
+	opacity: 0.7;
 }
 .img-list {
 	width: 28px;
 	height: 18px;
 	margin: 0px 0px 0px 20px;
+	transition: opacity 0.3s ease;
+}
+.img-list:hover {
+	opacity: 0.7;
 }
 .ico-arrow {
 	width: 18px;
 	height: 18px;
+}
+.filter-reset {
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+.filter-reset:hover {
+	color: #4b88ff !important;
 }
 .card-img {
 	padding: 12px;
@@ -414,6 +438,84 @@ input::placeholder {
 	color: #4b88ff !important;
 	opacity: 0.5;
 	font-size: 0.8rem;
+}
+
+.form-control {
+	border-radius: 10px;
+	border: 2px solid #e0e0e0;
+	padding: 12px;
+	font-size: 14px;
+	transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+	border-color: #4b88ff;
+	box-shadow: 0 0 0 0.2rem rgba(75, 136, 255, 0.25);
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+	.container {
+		--bs-gutter-x: 2rem;
+	}
+	
+	.header-text {
+		padding: 0px 10px;
+		font-size: 14px !important;
+	}
+	
+	.header-num {
+		font-size: 24px;
+	}
+	
+	.btn-bd-special-1,
+	.btn-bd-special-2,
+	.btn-bd-special-3 {
+		font-size: 12px;
+		padding: 6px 10px;
+	}
+	
+	.logo-insight {
+		width: 140px;
+		height: 36px;
+	}
+	
+	.card {
+		width: 100% !important;
+		margin: 10px auto;
+	}
+	
+	.modal-dialog {
+		margin: 10px;
+	}
+	
+	.modal-title {
+		font-size: 16px;
+	}
+}
+
+/* Card hover effects */
+.card {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Button focus states for accessibility */
+.btn:focus,
+.btn-bd-special-1:focus,
+.btn-bd-special-2:focus,
+.btn-bd-special-3:focus {
+	outline: 2px solid #4b88ff;
+	outline-offset: 2px;
+}
+
+.btn-close:focus {
+	outline: 2px solid #4b88ff;
+	outline-offset: 2px;
 }
 
 /* montserrat-regular - latin */
